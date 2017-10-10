@@ -1,0 +1,10 @@
+d:\test\repository\bin\Debug\netcoreapp2.0\repository.deps.json
+d:\test\repository\bin\Debug\netcoreapp2.0\repository.runtimeconfig.json
+d:\test\repository\bin\Debug\netcoreapp2.0\repository.runtimeconfig.dev.json
+d:\test\repository\bin\Debug\netcoreapp2.0\repository.dll
+d:\test\repository\bin\Debug\netcoreapp2.0\repository.pdb
+d:\test\repository\obj\Debug\netcoreapp2.0\repository.csproj.CoreCompileInputs.cache
+d:\test\repository\obj\Debug\netcoreapp2.0\repository.AssemblyInfoInputs.cache
+d:\test\repository\obj\Debug\netcoreapp2.0\repository.AssemblyInfo.cs
+d:\test\repository\obj\Debug\netcoreapp2.0\repository.dll
+d:\test\repository\obj\Debug\netcoreapp2.0\repository.pdb
