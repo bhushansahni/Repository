@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
@@ -12,6 +13,11 @@ namespace Repository.Dapper.Base
 {
     public class BaseContext : IDbContext
     {
+        IDbConnection _connection;
+        public BaseContext(IDbConnection connection)
+        {
+            _connection = connection;
+        }
         public DatabaseFacade Database => throw new NotImplementedException();
 
         public ChangeTracker ChangeTracker => throw new NotImplementedException();

@@ -4,6 +4,7 @@ using Repository.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System.IO;
+using Repository.Database;
 
 namespace Repository
 {
@@ -20,7 +21,10 @@ namespace Repository
 
             //  var optionsBuilder = new DbContextOptionsBuilder();
             //  optionsBuilder.Options.UseSqlServer(optionsBuilder, Configuration.GetConnectionString("DefaultConnection"));
-            var context = new DbContextBase<TestEntity>(Configuration.GetConnectionString("DefaultConnection"));
+
+
+
+            var context = new DbContextBase<TestEntity>(new SqlDbConnectionFactory(Configuration.GetConnectionString("DefaultConnection")).GetOpenConnection());
             var service = new TestService(new UnitOfWork(context));
             var entity = new TestEntity();
             entity.DateCreated=DateTime.Now;

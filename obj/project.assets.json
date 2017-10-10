@@ -5053,11 +5053,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\test\\Repository\\Repository.csproj",
+      "projectUniqueName": "d:\\Git Source\\Repository\\Repository.csproj",
       "projectName": "Repository",
-      "projectPath": "d:\\test\\Repository\\Repository.csproj",
+      "projectPath": "d:\\Git Source\\Repository\\Repository.csproj",
       "packagesPath": "C:\\Users\\bhushan.sahni\\.nuget\\packages\\",
-      "outputPath": "d:\\test\\Repository\\obj\\",
+      "outputPath": "d:\\Git Source\\Repository\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

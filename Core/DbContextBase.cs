@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
@@ -13,17 +15,15 @@ namespace Repository.Core
     public class DbContextBase<TEntity> : DbContext,IDbContext where TEntity:EntityBase
     {
 
-        string _connectionString;
-        //DbContextOptionsBuilder _contextOptions;
-        public DbContextBase(string connectionString)
+        DbConnection _connection;
+        public DbContextBase(IDbConnection connection)
         {
-            _connectionString=connectionString;
-            //_contextOptions = new DbContextOptionsBuilder().UseSqlServer(_connectionString);
-            
+            _connection = connection as DbConnection;
         }
+
         protected override void OnConfiguring(DbContextOptionsBuilder _contextOptions)
         {
-            _contextOptions.UseSqlServer(_connectionString);
+            _contextOptions.UseSqlServer(_connection);
         }
         public DbSet<TEntity> Entities { get; set; }
         public DatabaseFacade Database {get; private set;}
